@@ -39,7 +39,7 @@ body{
     background-color: #2bb5e8;
     height: 75px;
     width: 75px;
-    margin: none;
+    margin: 0;
     bottom: 25px;
     left: 25px;
     position: fixed;
@@ -82,8 +82,10 @@ body{
     right: 10px;
     transform: translateY(-50%);
     font-size: 20px;
+    transform-origin: top right;
 }
 .left-arrow.active{
-    transform: rotate(100deg);
+    transform: translateX(-10deg);
     transition: 1s;
+    
 }
