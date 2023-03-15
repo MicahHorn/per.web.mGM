@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&family=Tilt+Neon&display=swap');
+
+
+
+
+body{
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container ul{
+    list-style-type: none;
+    position: relative;
+    left: 5px;
+    bottom: 10px;
+    font-size: 22px;
+    margin: none;
+    
+}
+
+.container ul a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    position: fixed;
+    bottom: 0px;
+    opacity: 0%;
+    margin: none;
+    left: 0px;
+    z-index: -1;
+}
+.box {
+    background-color: #2bb5e8;
+    height: 75px;
+    width: 75px;
+    margin: none;
+    bottom: 25px;
+    left: 25px;
+    position: fixed;
+    border-style: solid;
+    border-color: #252225;
+    border-width: 2.5px;
+    text-align: center;
+    cursor: pointer;
+}
+.box .list{
+    position: relative;
+    text-align: center;
+    top: 31%;
+    padding: none;
+    margin: none;
+    font-size: 28px;
+    
+}
+
+
+.box.active{
+    height: 175px;
+    width: 200px;
+    transition: .75s;
+}
+.box.active .list{
+    visibility: hidden;
+}
+
+.container.active{
+    transition: 1s;
+    transition-delay: .2s;
+    opacity: 100%;
+    z-index: 1;
+    transform: translateY(-15px);
+}
+.left-arrow{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.left-arrow.active{
+    transform: translateX(-700px);
+    transition: transform 1s linear;
+    transform-origin: top right;
+}
