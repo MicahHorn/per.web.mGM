@@ -2,6 +2,9 @@ const box = document.querySelector('.box')
 const container = document.querySelector('.container')
 const arrow = document.querySelector('.left-arrow')
 const body = document.querySelector('.body')
+const leftcont = document.querySelector('.left-container')
+const rarrow = document.querySelector('.right-arrow')
+const announcement = document.querySelector('.ann')
 
 
 box.addEventListener('click', () => {
@@ -11,16 +14,31 @@ box.addEventListener('click', () => {
 
 arrow.addEventListener('mouseover', () =>{
     arrow.classList.add('active')
-    body.classList.add('active')
-
+    leftcont.classList.add('active')
+    rarrow.classList.add('active')
+    console.log('hello')
 })
-body.addEventListener('click', () => {
-    if (arrow.classList.contains('active')){
-        arrow.classList.remove('active')
-    }
-})
-arrow.addEventListener('click', () =>{
+rarrow.addEventListener('click', () =>{
     if(arrow.classList.contains('active')){
         arrow.classList.remove('active')
+        leftcont.classList.remove('active')
+        rarrow.classList.remove('active')
     }
 })
+
+setInterval(rotate, 750)
+let timing = 0
+function rotate(){
+    if (timing == 0){
+        announcement.classList.remove('inactive')
+        announcement.classList.add('active')
+        timing = 1
+    }
+    else{
+        announcement.classList.remove('active')
+        announcement.classList.add('inactive')
+        timing = 0
+    }
+    
+}
+

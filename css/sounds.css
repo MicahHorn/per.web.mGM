@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Avestan&family=Sono&family=Tilt+Neon&display=swap');
+
+
+body{
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-family: 'Sono', sans-serif;
+    font-family: 'Tilt Neon', cursive;
+    background-color: rgb(161, 100, 233);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.btn{
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+}
+.btn:hover{
+    opacity: 90%;
+}
+.btn:active{
+    scale: .98;
+}

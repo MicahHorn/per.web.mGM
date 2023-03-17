@@ -5,14 +5,21 @@
 
 body{
     font-family: 'Sono', sans-serif;
-    display: flex;
     overflow: hidden;
     margin: 0;
     height: 100vh;
     width: 100vw;
+    background-color: #cdcdcd;
 
 }
-
+.container{
+    position: fixed;
+    bottom: 0px;
+    opacity: 0%;
+    margin: none;
+    left: 0px;
+    z-index: -1;
+}
 .container ul{
     list-style-type: none;
     position: relative;
@@ -27,14 +34,7 @@ body{
     text-decoration: none;
     color: black;
 }
-.container{
-    position: fixed;
-    bottom: 0px;
-    opacity: 0%;
-    margin: none;
-    left: 0px;
-    z-index: -1;
-}
+
 .box {
     background-color: #2bb5e8;
     height: 75px;
@@ -58,7 +58,13 @@ body{
     font-size: 28px;
     
 }
+p{
+    position: relative;
+    left: 18%;
+    max-width: 65vw;
+    top: 125px;
 
+}
 
 .box.active{
     height: 175px;
@@ -82,10 +88,85 @@ body{
     right: 10px;
     transform: translateY(-50%);
     font-size: 20px;
-    transform-origin: top right;
+    z-index: 2;
+}
+.right-arrow{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0%;
+    z-index: 1;
+    cursor: pointer;
+}
+.right-arrow.active{
+    transform: translateX(-245px);
+    opacity: 100%;
+    transition: 1s;
+    z-index: 2;
+
 }
 .left-arrow.active{
-    transform: translateX(-10deg);
+    transform: translateX(-245px);
+    opacity: 0%;
     transition: 1s;
+    z-index: 1;
+}
+.left-container{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    background-color: #2bb5e8;
+    z-index: 3;
+    border-style: solid;
+    border-color: #252525;
+    border-width: 0px 0px 0px 1.5px;
+    margin: 0;
+    opacity: 0%;
+}
+.left-container.active{
+    width: 245px;
+    transition: 1s;
+    opacity: 100%;
+}
+
+h3{
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 35px;
+}
+.ann{
+    position: absolute;
+    bottom: 112px;
+    left: 40px;
+    cursor: context-menu;
+    height: 50px;
+    width: 200px;
+
     
+}
+.turnarrow{
+    position: absolute;
+    margin: 0;
+    font-size: 25px;
+    top: 10px;
+    transform: scaleX(-1);
+}
+.smalltext p{
+    position: absolute;
+    top: -12px;
+    left: 25px;
+}
+.ann.active{
+    transform: rotate(-10deg);
+    transition: .5s;
+}
+.ann.inactive{
+    transform: rotate(10deg);
+    transition: .5s;
 }
