@@ -30,3 +30,8 @@ body{
 .btn:active{
     scale: .98;
 }
+a{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

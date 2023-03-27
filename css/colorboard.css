@@ -1,0 +1,55 @@
+
+
+body{
+    background-color: #111111;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.square{
+    height: 16px;
+    width: 16px;
+    background-color: #1d1d1d;
+    margin: 2px;
+    transition: 2s ease;
+}
+
+.square:hover{
+    transition-duration: 0s;
+}
+
+.counter{
+    height: 25px;
+    width: 25px;
+    z-index: 3;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white
+}
+a{
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    color: white
+}
+a:active{
+    color: blue;
+}

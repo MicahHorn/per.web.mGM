@@ -24,7 +24,7 @@ body{
     list-style-type: none;
     position: relative;
     left: 5px;
-    bottom: 10px;
+    bottom: 7px;
     font-size: 22px;
     margin: none;
     
@@ -67,7 +67,7 @@ p{
 }
 
 .box.active{
-    height: 175px;
+    height: 300px;
     width: 200px;
     transition: .75s;
 }
@@ -125,6 +125,7 @@ p{
     border-width: 0px 0px 0px 1.5px;
     margin: 0;
     opacity: 0%;
+    align-items: center;
 }
 .left-container.active{
     width: 245px;
@@ -169,4 +170,40 @@ h3{
 .ann.inactive{
     transform: rotate(10deg);
     transition: .5s;
+}
+.colorboard{
+    height: 175px;
+    position: relative;
+    background-color: #555555;
+    margin: 10px;
+    text-align: center;
+    border: solid;
+    border-color: #252525;
+    opacity: 0%;
+
+}
+.colorboard h1{
+    font-size: 15px;
+}
+.colorboard a{
+    position: relative;
+    z-index: 5;
+}
+.colorboard a img{
+    width: 210px;
+    height: 135px;
+    opacity: 0%;
+    
+}
+.colorboard.active a img{
+    transition: 1s;
+    transition-delay: .6s;
+    opacity: 100%;
+}
+.colorboard.active{
+    opacity: 100%;
+    transition: 1.05s ease;
+} 
+.colorboard:hover{
+    transform: scale(1.01);
 }

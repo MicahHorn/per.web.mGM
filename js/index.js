@@ -5,6 +5,7 @@ const body = document.querySelector('.body')
 const leftcont = document.querySelector('.left-container')
 const rarrow = document.querySelector('.right-arrow')
 const announcement = document.querySelector('.ann')
+const colorboard = document.querySelector('.colorboard')
 
 
 box.addEventListener('click', () => {
@@ -15,6 +16,7 @@ box.addEventListener('click', () => {
 arrow.addEventListener('mouseover', () =>{
     arrow.classList.add('active')
     leftcont.classList.add('active')
+    colorboard.classList.add('active')
     rarrow.classList.add('active')
     console.log('hello')
 })
@@ -23,6 +25,7 @@ rarrow.addEventListener('click', () =>{
         arrow.classList.remove('active')
         leftcont.classList.remove('active')
         rarrow.classList.remove('active')
+        colorboard.classList.remove('active')
     }
 })
 
